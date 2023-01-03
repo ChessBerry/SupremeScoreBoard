@@ -48,6 +48,10 @@ Shoot me a message on <a href="http://forums.faforever.com/memberlist.php?mode=v
 
 ## History
 
+### Changes by CheeseBerry, Jan 03, 2023 and following
+- changed the "send all units to ally" option when pressing shift to the non-shift "send selected units to ally" version.
+This is because I never use the send ALL units on purpose, I only do it on accident, screwing up the game in the process..
+
 ### Version 4-6 - November 12, 2020
 - added economy income of allied players in game session
 - added economy storage of allied players in game session

@@ -656,9 +656,10 @@ function CreateArmyLine(armyID, army)
         group.shareUnitsIcon.armyID = armyID
         group.shareUnitsIcon.OnClick = function(self, eventModifiers)
             if eventModifiers.Right then 
-                 Diplomacy.RequestUnits(self.armyID) 
+                 Diplomacy.RequestUnits(self.armyID) -- request engi
              elseif eventModifiers.Shift then 
-                 Diplomacy.SendUnits(self.armyID, true) -- share all units
+                 Diplomacy.SendUnits(self.armyID, false) -- share selected units
+                --  Diplomacy.SendUnits(self.armyID, true) -- share all units - Disabled by CheeseBerry and replaced with normal unit share, because I only ever use this on accident..
              elseif not eventModifiers.Shift then 
                  Diplomacy.SendUnits(self.armyID, false) -- share selected units
              end         
