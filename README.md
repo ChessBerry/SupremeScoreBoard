@@ -51,6 +51,10 @@ Create an issue or Pull Request to reach me with ideas
 
 ## History
 
+### Changes by CheeseBerry
+- Changed the "send all units to ally" option when pressing shift to the non-shift "send selected units to ally" version.
+  This is because I never use the send ALL units on purpose, I only do it on accident, screwing up the game in the process..
+
 ### Version 18 - June 07, 2023
 - SSB options renamed to reset settings if switching from SSB v6.0
 - Added extra trace points to find out the reason for Gyle's bug, where the manual selecting of the columns does not work.

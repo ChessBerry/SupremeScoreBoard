@@ -655,13 +655,11 @@ function CreateArmyLine(armyID, army)
         SetIconSize(group.shareUnitsIcon)
         group.shareUnitsIcon.armyID = armyID
         group.shareUnitsIcon.OnClick = function(self, eventModifiers)
-            if eventModifiers.Right then 
-                 Diplomacy.RequestUnits(self.armyID) 
-             elseif eventModifiers.Shift then 
-                 Diplomacy.SendUnits(self.armyID, true) -- share all units
-             elseif not eventModifiers.Shift then 
-                 Diplomacy.SendUnits(self.armyID, false) -- share selected units
-             end         
+            if eventModifiers.Right then
+                Diplomacy.RequestUnits(self.armyID)
+            else
+                Diplomacy.SendUnits(self.armyID, false) -- share selected units, even on shift click
+            end
         end 
         Tooltip.AddControlTooltip(group.shareUnitsIcon, str.tooltip('share_units'))
         
