@@ -1,4 +1,4 @@
-local SSB = '/mods/SupremeScoreBoard2/modules/score_board.lua'
+local SSB = '/mods/SupremeScoreBoard2CBT/modules/score_board.lua'
 
 local armiesDetails = GetArmiesTable().armiesTable
 local pingColors = {

@@ -1,5 +1,5 @@
 local orgUpdateScoreData = UpdateScoreData
-local modPath = '/mods/SupremeScoreBoard2/'
+local modPath = '/mods/SupremeScoreBoard2CBT/'
 
 function UpdateScoreData(newData) 
 

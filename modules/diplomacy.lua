@@ -9,7 +9,7 @@
 -- http://forums.faforever.com/forums/memberlist.php?mode=viewprofile&u=9827
 -- ##########################################################################################
  
-local modPath = '/mods/SupremeScoreBoard2/'
+local modPath = '/mods/SupremeScoreBoard2CBT/'
 local modTextures = modPath..'textures/'
 local modScripts  = modPath..'modules/'
 local modInfo  = import(modPath..'mod_info.lua')

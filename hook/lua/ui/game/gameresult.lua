@@ -5,7 +5,7 @@
 --* Copyright © 2006 Gas Powered Games, Inc.  All rights reserved.
 --*****************************************************************************
 
-local modPath = '/mods/SupremeScoreBoard2/'
+local modPath = '/mods/SupremeScoreBoard2CBT/'
 local modScripts  = modPath..'modules/'
 local str  = import(modScripts..'ext.strings.lua')
 local log  = import(modScripts..'ext.logging.lua')

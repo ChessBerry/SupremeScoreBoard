@@ -12,7 +12,7 @@ function Create(parent)
     -- GUI.TestBtn.Depth:Set(1000)
     -- GUI.TestBtn.OnClick = function()
     --     WARN('TEST.OnClick') 
-    --     import('/mods/SupremeScoreBoard2/modules/test.lua').RunTest()
+    --     import('/mods/SupremeScoreBoard2CBT/modules/test.lua').RunTest()
     -- end
     -- LayoutHelpers.LeftOf(GUI.TestBtn, controls.parent) 
     -- LayoutHelpers.AtTopIn(GUI.TestBtn, GUI, 15)

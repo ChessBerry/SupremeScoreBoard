@@ -1,4 +1,4 @@
-local modPath = '/mods/SupremeScoreBoard2/'
+local modPath = '/mods/SupremeScoreBoard2CBT/'
 local modScripts  = modPath..'modules/'
 
 CurrentEvents = {}

@@ -1,4 +1,4 @@
-# SupremeScoreBoard2 (UI) mod
+# SupremeScoreBoard2CBT (UI) mod
 
 This repository contains implementation of a mod for Supreme Commander FA game. This mod changes only User Interface of the game and it can be used in multiplayer games withouth affecting other players. This mod is fully compatiable with Forged Alliance Forever.
 
@@ -20,18 +20,18 @@ Download the **Supreme Score Board** mod from the vault in <a href="https://www.
 
 or
 
-1. Open <a href="https://github.com/rigomate/SupremeScoreBoard" target="_blank">versions</a> folder and download a zip file with latest version of SupremeScoreBoard2 mod.
+1. Open <a href="https://github.com/ChessBerry/SupremeScoreBoard" target="_blank">versions</a> folder and download a zip file with latest version of SupremeScoreBoard2CBT mod.
 2. Open your "Mods" folder for Supreme Commander FA game, e.g.
 
 C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\
 
-3. Delete the SupremeScoreBoard2 folder (if it exists). This will prevent conflicts between older version of this mod.
+3. Delete the SupremeScoreBoard2CBT folder (if it exists). This will prevent conflicts between older version of this mod.
 4. Unzip the downloaded zip file to your "Mods" folder 
 5. Make sure mod_info.lua file is in this folder and not in subfolders of:
 
-C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\SupremeScoreBoard2\
+C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\SupremeScoreBoard2CBT\
 
-6. Enable SupremeScoreBoard2 mod in Mod Manager (in Supreme Commander FA game)
+6. Enable SupremeScoreBoard2CBT mod in Mod Manager (in Supreme Commander FA game)
 
 ## License
 

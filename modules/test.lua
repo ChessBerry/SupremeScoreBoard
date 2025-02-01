@@ -17,8 +17,8 @@ function RunTest()
 --    table.print(score, 'score', WARN)
 
   --  local senderUI = GetFrame(0)
-  --  import('/mods/SupremeScoreBoard2/modules/score_board.lua').AnnounceUnit(1, 'test AnnounceUnit2')
-   -- import('/mods/SupremeScoreBoard2/modules/score_popup.lua').Show(1, 'test AnnounceUnit2')
+  --  import('/mods/SupremeScoreBoard2CBT/modules/score_board.lua').AnnounceUnit(1, 'test AnnounceUnit2')
+   -- import('/mods/SupremeScoreBoard2CBT/modules/score_popup.lua').Show(1, 'test AnnounceUnit2')
 
  --  local numbers = { 0.1, 0.02 } -- , 0.003, 0.0004, 0.00005
  --  

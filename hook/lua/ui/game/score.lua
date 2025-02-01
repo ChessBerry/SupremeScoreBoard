@@ -1,5 +1,5 @@
-local SSM = '/mods/SupremeScoreBoard2/'
-local SSB = '/mods/SupremeScoreBoard2/modules/score_board.lua'
+local SSM = '/mods/SupremeScoreBoard2CBT/'
+local SSB = '/mods/SupremeScoreBoard2CBT/modules/score_board.lua'
 
 --currentScores = false  
 
