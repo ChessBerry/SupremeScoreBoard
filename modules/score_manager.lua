@@ -97,7 +97,7 @@ function GetArmyRating(armyIndex)
     local armyName = GetArmyName(armyIndex)
     local rating = {}
     rating.actual = sessionOptions.Ratings[armyName]
-    if (rating.actual == nil or string.find(armyName,"%(AI")) then
+    if (rating.actual == nil or (rating.actual == 0 and string.find(armyName,"%(AI"))) then
         rating.base = 0
         -- AI Base Rating
             if (string.find(armyName,"AIx")) then rating.base = 500 
@@ -247,9 +247,12 @@ function GetReplayId()
         log.Trace('GetReplayId()... from cmd /syncreplay ' .. tostring(id) )
 
     elseif HasCommandLineArg("/savereplay") then
+        -- /savereplay format is gpgnet://local_ip:port/replay_id/USERNAME.SCFAreplay
+        -- see https://github.com/FAForever/downlords-faf-client/blob/2a69b63eae6e1c28a60419a8627592b4469428f5/src/main/java/com/faforever/client/fa/LaunchCommandBuilder.java#L260
         local url = GetCommandLineArg("/savereplay", 1)[1]
-        local lastpos = string.find(url, "/", 20)
-        id = string.sub(url, 20, lastpos-1)
+        local fistpos = string.find(url, "/", 10) + 1
+        local lastpos = string.find(url, "/", fistpos) - 1
+        id = string.sub(url, fistpos, lastpos)
         log.Trace('GetReplayId()... from cmd /savereplay ' .. tostring(id) )
 
     elseif HasCommandLineArg("/replayid") then
