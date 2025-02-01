@@ -3,7 +3,7 @@ version      = 20
 uid          = "CHEESEBERRY-a1e2-c4t4-scfa-ssbmod-v0200"
 author       = "HUSSAR"
 copyright    = "HUSSAR, free to re-use code as long as you credit me in your mod"
-contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB, BlackYps, Strogo, BenDover, Rigomate"
+contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB, BlackYps, Strogo, BenDover, Rigomate, CheeseBerry"
 description  = "Difference to normal Supreme Score Board: Kill notifications work again with game version 3756 and higher. Improves score board in Game and in Replay sessions by adding team stats, stats about allies eco, sending eco to allies, killed-by notifications, stats about reclaim, kill-ratio, info about game being rated or not, and more. All Credits go to HUSSAR, who created this mod"
 
 icon         = "/mods/SupremeScoreBoard2CBT/mod_icon.png"
