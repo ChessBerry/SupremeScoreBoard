@@ -1,6 +1,6 @@
-name         = "Supreme Score Board2"
+name         = "Supreme Score Board2-CBT"
 version      = 20
-uid          = "RIGOMATE-a1e2-c4t4-scfa-ssbmod-v0200"
+uid          = "CHEESEBERRY-a1e2-c4t4-scfa-ssbmod-v0200"
 author       = "HUSSAR"
 copyright    = "HUSSAR, free to re-use code as long as you credit me in your mod"
 contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB, BlackYps, Strogo, BenDover, Rigomate"
@@ -17,7 +17,8 @@ exclusive    = false
 requiresNames = { }
 requires      = { }
 -- this mod will conflict with all mods that modify score.lua file:
-conflicts   = { 
+conflicts   = {
+    "RIGOMATE-a1e2-c4t4-scfa-ssbmod-v0200", -- non-CBT SSB
     "9B5F858A-163C-4AF1-B846-A884572E61A5", -- INTERGRATED lazyshare  
     "b0059a8c-d9ab-4c30-adcc-31c16580b59d", -- INTERGRATED lazyshare  
     "c31fafc0-8199-11dd-ad8b-0866200c9a68", -- INTERGRATED coloured allies in score

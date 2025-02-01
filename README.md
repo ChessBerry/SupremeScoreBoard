@@ -51,7 +51,7 @@ Create an issue or Pull Request to reach me with ideas
 
 ## History
 
-### Changes by CheeseBerry
+### Version 20CBT - Additional Changes by CheeseBerry
 - Changed the "send all units to ally" option when pressing shift to the non-shift "send selected units to ally" version.
   This is because I never use the send ALL units on purpose, I only do it on accident, screwing up the game in the process..
 
