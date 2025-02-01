@@ -4,7 +4,7 @@ uid          = "CHEESEBERRY-a1e2-c4t4-scfa-ssbmod-v0200"
 author       = "HUSSAR"
 copyright    = "HUSSAR, free to re-use code as long as you credit me in your mod"
 contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB, BlackYps, Strogo, BenDover, Rigomate, CheeseBerry"
-description  = "Difference to normal Supreme Score Board: Kill notifications work again with game version 3756 and higher. Improves score board in Game and in Replay sessions by adding team stats, stats about allies eco, sending eco to allies, killed-by notifications, stats about reclaim, kill-ratio, info about game being rated or not, and more. All Credits go to HUSSAR, who created this mod"
+description  = "CheeseBerryTweaks version of Supreme Score Board2. Disables the \"send all units to ally\" option when pressing shift to avoid accidentally sending all of your units to an ally."
 
 icon         = "/mods/SupremeScoreBoard2CBT/mod_icon.png"
 url          = "https://github.com/rigomate/SupremeScoreBoard"
@@ -70,6 +70,10 @@ after = {
 -]] 
 
 history = [[
+
+### Version 20CBT - Additional Changes by CheeseBerry
+- Changed the "send all units to ally" option when pressing shift to the non-shift "send selected units to ally" version.
+  This is because I never use the send ALL units on purpose, I only do it on accident, screwing up the game in the process..
 
 ### Version 20 - July 03, 2024
 - Fix bug when Score was shown more than once at the end of game
