@@ -57,11 +57,6 @@ local orgDoGameResult = DoGameResult
 local isVictoryCalled = false  -- Declare a local variable to store state
 
 function DoGameResult(armyID, result)
-    if isVictoryCalled then
-        log.Trace('Victory has been called, so redirecting to original DoGameResult function')
-        orgDoGameResult(armyID, result)
-        return
-    end
     log.Trace('armyID is = ' .. armyID .. ' result is: ' .. result)
 
     local version = import('/lua/version.lua').GetVersion()
@@ -76,16 +71,49 @@ function DoGameResult(armyID, result)
     ResultStrings.OtherArmy = OtherArmyResultStrings
     ResultStrings.MyArmy = MyArmyResultStrings
 
+    -- In case of a victory the Score Dialogue needs to be shown directly from here, but make sure it is only performed once
+    if (resultsplitted == 'victory' and not isVictoryCalled) then
+        isVictoryCalled = true
+        -- Otherwise, do the end-of-game stuff.
+        if SessionIsObservingAllowed() then
+            SetFocusArmy(-1)
+        end
+        
+        local victory = result == 'victory'
+        log.Trace('GameResults:... ' .. tostring(result).. ' | victory = '  .. tostring(victory) )
+        if victory then
+            --TODO AnnounceVictory(losersID, message, drawingIndex)
+            AnnounceVictory(armyID, message)
+            PlaySound(Sound({Bank = 'Interface', Cue = 'UI_END_Game_Victory'}))
+        else
+            --TODO AnnounceDefeat(losersID, message, drawingIndex)
+            PlaySound(Sound({Bank = 'Interface', Cue = 'UI_END_Game_Fail'}))
+        end
+        stats.done = true
+    
+        local tabs = import('/lua/ui/game/tabs.lua')
+        tabs.OnGameOver()
+        
+        --message = ' '.. LOC(MyArmyResultStrings[result]) .. ' '
+        --tabs.TabAnnouncement('main', LOC(MyArmyResultStrings[result]))
+    
+        local score = import('/lua/ui/dialogs/score.lua')
+        tabs.AddModeText("<LOC _Score>", function()
+            UIUtil.QuickDialog(GetFrame(0),
+                "<LOC EXITDLG_0003>Are you sure you'd like to exit?",
+                "<LOC _Yes>", function() score.CreateDialog(victory) end,
+                "<LOC _No>", nil,
+                nil, nil,
+                true,
+                {escapeButton = 2, enterButton = 1, worldCover = true})
+        end)
+        return
+    end
+    
     if version >= 3756 then
         log.Trace('Version is = ' .. version .. ' : therefore using new kill notificiation')
         local currentEvents = import(modScripts..'score_events.lua').CurrentEvents
         local DoGameResultNew = import(modScripts..'gameresultnew.lua').DoGameResultNew
-        if (resultsplitted == 'victory') then
-            isVictoryCalled = true
-            log.Trace('Calling orgDoGameResult for the first time')
-            orgDoGameResult(armyID, result)
-            return
-        end
         DoGameResultNew(armyID, resultsplitted, currentEvents, ResultStrings, Announces)
     elseif version < 3741 then
         log.Trace('Version is = ' .. version .. ' : therefore using old kill notification')
@@ -93,7 +121,6 @@ function DoGameResult(armyID, result)
     else
         log.Trace('Version is = ' .. version .. ' : therefore kill notification is uncertain')
         if (resultsplitted == 'victory') then
-            isVictoryCalled = true
             log.Trace('Calling orgDoGameResult for the first time')
             orgDoGameResult(armyID, result)
             return

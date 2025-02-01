@@ -55,6 +55,14 @@ Create an issue or Pull Request to reach me with ideas
 - Changed the "send all units to ally" option when pressing shift to the non-shift "send selected units to ally" version.
   This is because I never use the send ALL units on purpose, I only do it on accident, screwing up the game in the process..
 
+### Version 20 - July 03, 2024
+- Fix bug when Score was shown more than once at the end of game
+
+### Version 19 - June 28, 2024
+- Fix bug when Score was not shown at the end of the game when the games was lost
+- Fix showing of AI ratings, credit to maudlin27
+- Fix showing port instead of the gameID when watching replay, credit to timocov
+
 ### Version 18 - June 07, 2023
 - SSB options renamed to reset settings if switching from SSB v6.0
 - Added extra trace points to find out the reason for Gyle's bug, where the manual selecting of the columns does not work.
